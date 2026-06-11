@@ -53,21 +53,21 @@ header img{
   font-size:0.85rem;
 }
 
-/* HERO */
+/* HERO (CLEAN 3:1 IMAGE) */
 .hero{
   position:relative;
-  padding:80px 20px;
+  padding:90px 20px;
   color:white;
 
   background-image: url("hero.jpg");
-  background-size:cover;
 
-  /* FIXED FRAMING: bring face back into view */
-  background-position: 75% 25%;
+  /* clean, no manipulation */
+  background-size:cover;
+  background-position:center;
   background-repeat:no-repeat;
 }
 
-/* CONTROLLED LEFT → RIGHT FADE */
+/* LEFT-TO-RIGHT FADE OVERLAY */
 .hero::before{
   content:"";
   position:absolute;
@@ -77,13 +77,13 @@ header img{
   background: linear-gradient(
     to right,
     rgba(89,114,101,1) 0%,
-    rgba(89,114,101,1) 50%,   /* solid left half */
-    rgba(89,114,101,0.15) 75%,
+    rgba(89,114,101,1) 50%,
+    rgba(89,114,101,0.2) 75%,
     rgba(89,114,101,0) 100%
   );
 }
 
-/* TEXT ABOVE OVERLAY */
+/* CONTENT ABOVE OVERLAY */
 .hero-content{
   position:relative;
   z-index:2;
