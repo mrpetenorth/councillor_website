@@ -41,7 +41,7 @@ header img{
   height:48px;
   width:auto;
   display:block;
-  flex-shrink:0;
+  flex:0 0 48px;
 }
 
 /* HEADER TEXT */
@@ -132,17 +132,13 @@ footer{
 <body>
 
 <!-- HEADER -->
-<header style="display:flex;align-items:center;gap:15px;">
-
-  <img src="https://mrpetenorth.github.io/councillor_website/logo.png"
-       alt="Bricknell Logo"
-       style="height:48px;width:48px;object-fit:contain;display:block;flex:0 0 48px;">
+<header>
+  <img src="logo.png" alt="Bricknell Logo">
 
   <div>
     <div class="logo">Cllr Peter North</div>
     <div class="tagline">Bricknell Ward • Local Councillor</div>
   </div>
-
 </header>
 
 <!-- HERO -->
