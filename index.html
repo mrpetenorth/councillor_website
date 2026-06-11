@@ -53,7 +53,7 @@ header img{
   font-size:0.85rem;
 }
 
-/* HERO (IMAGE LAYER) */
+/* HERO */
 .hero{
   position:relative;
   padding:80px 20px;
@@ -62,29 +62,28 @@ header img{
   background-image: url("hero.jpg");
   background-size:cover;
 
-  /* controls cropping */
-  background-position: 70% 70%;
+  /* image position: right + down */
+  background-position: 85% 85%;
   background-repeat:no-repeat;
 }
 
-/* OVERLAY LAYER (YOUR CONTROLLED FADE) */
+/* HARD LEFT BLOCK + CONTROLLED FADE */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
+  z-index:1;
 
   background: linear-gradient(
     to right,
-    rgba(89,114,101,1) 0%,     /* solid green */
-    rgba(89,114,101,1) 50%,    /* still solid halfway */
-    rgba(89,114,101,0.3) 75%,  /* start fade */
-    rgba(89,114,101,0) 100%    /* fully transparent */
+    rgba(89,114,101,1) 0%,
+    rgba(89,114,101,1) 50%,   /* solid until halfway */
+    rgba(89,114,101,0.15) 75%,
+    rgba(89,114,101,0) 100%
   );
-
-  z-index:1;
 }
 
-/* TEXT ABOVE EVERYTHING */
+/* CONTENT ABOVE EVERYTHING */
 .hero-content{
   position:relative;
   z-index:2;
@@ -122,6 +121,10 @@ header img{
   font-weight:600;
   margin-right:8px;
   font-size:0.95rem;
+}
+
+.btn:hover{
+  opacity:0.9;
 }
 
 /* SECTIONS */
@@ -171,7 +174,6 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" alt="Bricknell Logo">
 
@@ -181,7 +183,6 @@ footer{
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 
   <div class="hero-content">
@@ -198,7 +199,6 @@ footer{
 
 </section>
 
-<!-- PRIORITIES -->
 <section class="section">
   <h2>Local Focus</h2>
 
@@ -220,7 +220,6 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="updates">
   <h2>Contact & Information</h2>
 
@@ -242,7 +241,6 @@ footer{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Cllr Peter North • Bricknell Ward
 </footer>
