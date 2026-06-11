@@ -53,21 +53,19 @@ header img{
   font-size:0.85rem;
 }
 
-/* HERO (CLEAN 3:1 IMAGE) */
+/* HERO */
 .hero{
   position:relative;
   padding:90px 20px;
   color:white;
 
   background-image: url("hero-v2.jpg");
-
-  /* clean, no manipulation */
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
 
-/* LEFT-TO-RIGHT FADE OVERLAY */
+/* OVERLAY (controls fade) */
 .hero::before{
   content:"";
   position:absolute;
@@ -78,7 +76,7 @@ header img{
     to right,
     rgba(89,114,101,1) 0%,
     rgba(89,114,101,1) 50%,
-    rgba(89,114,101,0.2) 75%,
+    rgba(89,114,101,0.25) 75%,
     rgba(89,114,101,0) 100%
   );
 }
