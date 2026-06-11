@@ -58,11 +58,23 @@ header img{
   margin-top:2px;
 }
 
-/* HERO */
+/* HERO (IMAGE + FADE) */
 .hero{
-  background:var(--primary);
+  position:relative;
   color:white;
-  padding:64px 20px;
+  padding:80px 20px;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(89,114,101,0.65),
+      rgba(36,48,41,0.92)
+    ),
+    url('hero.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-content{
@@ -170,8 +182,8 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
 
+  <div class="hero-content">
     <h1>Peter North</h1>
     <h2>Bricknell Ward Councillor</h2>
 
@@ -181,8 +193,8 @@ footer{
 
     <a href="mailto:your-email@example.com" class="btn">Contact / Report an Issue</a>
     <a href="#updates" class="btn">Local Information</a>
-
   </div>
+
 </section>
 
 <!-- PRIORITIES -->
