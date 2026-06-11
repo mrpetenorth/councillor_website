@@ -40,9 +40,9 @@ header img{
   height:42px;
   width:auto;
   display:block;
-  flex:0 0 42px;
 }
 
+/* TEXT */
 .logo{
   font-size:1.15rem;
   font-weight:600;
@@ -52,29 +52,39 @@ header img{
 .tagline{
   color:#666;
   font-size:0.85rem;
-  margin-top:2px;
 }
 
-/* HERO (THIS IS THE IMPORTANT PART) */
+/* HERO (DEBUG VERSION) */
 .hero{
   position:relative;
-  color:white;
   padding:80px 20px;
+  color:white;
 
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(89,114,101,0.65),
-      rgba(36,48,41,0.92)
-    ),
-    url("./hero.jpg");
+  /* fallback colour so you ALWAYS see something */
+  background-color: #597265;
+
+  /* image layer */
+  background-image: url("hero.jpg");
 
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
 
+/* DARK OVERLAY so text is readable */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.65)
+  );
+}
+
 .hero-content{
+  position:relative;
   max-width:900px;
   margin:auto;
 }
@@ -146,7 +156,6 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="logo.png" alt="Bricknell Logo">
 
@@ -156,7 +165,7 @@ footer{
   </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
 
   <div class="hero-content">
@@ -173,7 +182,6 @@ footer{
 
 </section>
 
-<!-- PRIORITIES -->
 <section class="section">
   <h2>Local Focus</h2>
 
@@ -195,7 +203,6 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="updates">
   <h2>Contact & Information</h2>
 
@@ -217,7 +224,6 @@ footer{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Cllr Peter North • Bricknell Ward
 </footer>
