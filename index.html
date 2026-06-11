@@ -62,12 +62,12 @@ header img{
   background-image: url("hero.jpg");
   background-size:cover;
 
-  /* image position: right + down */
-  background-position: 85% 85%;
+  /* FIXED FRAMING: bring face back into view */
+  background-position: 75% 25%;
   background-repeat:no-repeat;
 }
 
-/* HARD LEFT BLOCK + CONTROLLED FADE */
+/* CONTROLLED LEFT → RIGHT FADE */
 .hero::before{
   content:"";
   position:absolute;
@@ -77,13 +77,13 @@ header img{
   background: linear-gradient(
     to right,
     rgba(89,114,101,1) 0%,
-    rgba(89,114,101,1) 50%,   /* solid until halfway */
+    rgba(89,114,101,1) 50%,   /* solid left half */
     rgba(89,114,101,0.15) 75%,
     rgba(89,114,101,0) 100%
   );
 }
 
-/* CONTENT ABOVE EVERYTHING */
+/* TEXT ABOVE OVERLAY */
 .hero-content{
   position:relative;
   z-index:2;
