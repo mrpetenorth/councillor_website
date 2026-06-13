@@ -22,7 +22,7 @@
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   line-height:1.5;
-  background:#fff;
+  background:#f7f9f8;
   color:var(--dark);
 }
 
@@ -146,8 +146,13 @@ header img{
 /* SECTIONS */
 .section{
   max-width:900px;
-  margin:auto;
-  padding:60px 20px;
+  margin:30px auto;
+  padding:60px 30px;
+
+  background:white;
+  border-radius:14px;
+
+  box-shadow:0 8px 24px rgba(0,0,0,0.04);
 }
 
 .section h2{
@@ -164,12 +169,20 @@ header img{
 }
 
 .card{
-  background:var(--light);
+  background:#ffffff;
   padding:22px;
-  border-radius:10px;
+  border-radius:12px;
 
-  border:1px solid rgba(0,0,0,0.04);
+  border:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:0 4px 14px rgba(0,0,0,0.04);
+
   transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
 
 .card h3{
