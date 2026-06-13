@@ -7,6 +7,7 @@
 <title>Cllr Peter North | Bricknell Ward</title>
 
 <style>
+
 :root{
   --primary:#597265;
   --light:#f4f7f5;
@@ -29,7 +30,7 @@ body{
 /* HEADER */
 header{
   background:white;
-  border-bottom:2px solid rgba(89,114,101,0.25);
+  border-bottom:2px solid rgba(89,114,101,0.2);
   padding:12px 24px;
   display:flex;
   align-items:center;
@@ -39,35 +40,22 @@ header{
 header img{
   height:36px;
   width:auto;
-  display:block;
-}
-
-.logo{
-  font-size:1.15rem;
-  font-weight:600;
-  color:var(--dark);
-}
-
-.tagline{
-  color:#666;
-  font-size:0.85rem;
 }
 
 /* HERO */
 .hero{
   position:relative;
+  display:flex;
+  align-items:center;
   padding:90px 20px;
-  color:white;
+  overflow:hidden;
 
-  background-image:url("hero-v2.jpg");
+  background-image:url("hero.jpg");
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
-
-  overflow:hidden;
 }
 
-/* FADE */
+/* GREEN FADE OVERLAY */
 .hero::before{
   content:"";
   position:absolute;
@@ -78,7 +66,7 @@ header img{
     to right,
     rgba(89,114,101,1) 0%,
     rgba(89,114,101,1) 50%,
-    rgba(89,114,101,0.25) 75%,
+    rgba(89,114,101,0.2) 75%,
     rgba(89,114,101,0) 100%
   );
 }
@@ -99,30 +87,31 @@ header img{
   pointer-events:none;
 }
 
-/* HERO CONTENT */
+/* HERO CONTENT (LEFT COLUMN) */
 .hero-content{
   position:relative;
   z-index:3;
 
-  max-width:930px;
-  margin:auto;
-  transform:translateX(-50px);
+  max-width:520px;
+  margin:0;
+
+  padding-left:60px;
 }
 
 .hero h1{
   font-size:2.8rem;
-  margin-bottom:8px;
   line-height:1.1;
+  margin-bottom:6px;
 }
 
 .hero h2{
   font-size:1.2rem;
   font-weight:400;
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 .hero-content p{
-  max-width:75ch;
+  max-width:60ch;
   margin-bottom:20px;
   font-size:1.05rem;
 }
@@ -137,13 +126,19 @@ header img{
   border-radius:4px;
   font-weight:600;
   margin-right:8px;
+  transition:opacity 0.2s ease;
 }
 
 .btn:hover{
-  opacity:0.9;
+  opacity:0.85;
 }
 
-/* SECTIONS */
+/* PAGE BACKGROUND */
+body{
+  background:#f7f9f8;
+}
+
+/* SECTIONS (SURFACE STYLE) */
 .section{
   max-width:900px;
   margin:30px auto;
@@ -159,17 +154,18 @@ header img{
   margin-bottom:24px;
   font-size:1.5rem;
   font-weight:600;
-  letter-spacing:0.2px;
 }
 
+/* CARDS GRID */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
 
+/* CARDS */
 .card{
-  background:#ffffff;
+  background:#fff;
   padding:22px;
   border-radius:12px;
 
@@ -180,14 +176,8 @@ header img{
   transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 24px rgba(0,0,0,0.08);
-}
-
 .card h3{
   margin-bottom:8px;
-  font-size:1.05rem;
 }
 
 .card p{
@@ -208,6 +198,7 @@ footer{
   padding:22px;
   margin-top:40px;
 }
+
 </style>
 </head>
 
