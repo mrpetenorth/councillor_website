@@ -27,7 +27,6 @@ body{
 }
 
 /* HEADER */
-
 header{
   background:white;
   border-bottom:2px solid rgba(89,114,101,0.25);
@@ -55,7 +54,6 @@ header img{
 }
 
 /* HERO */
-
 .hero{
   position:relative;
   padding:90px 20px;
@@ -69,60 +67,51 @@ header img{
   overflow:hidden;
 }
 
-/* Green fade overlay */
-
+/* FADE */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-
-background:linear-gradient(
-  to right,
-  rgba(89,114,101,1) 0%,
-  rgba(89,114,101,1) 50%,
-  rgba(89,114,101,0.85) 60%,
-  rgba(89,114,101,0.55) 75%,
-  rgba(89,114,101,0.2) 90%,
-  rgba(89,114,101,0) 100%
-);
   z-index:1;
+
+  background:linear-gradient(
+    to right,
+    rgba(89,114,101,1) 0%,
+    rgba(89,114,101,1) 50%,
+    rgba(89,114,101,0.25) 75%,
+    rgba(89,114,101,0) 100%
+  );
 }
 
-/* Watermark logo */
-
+/* WATERMARK LOGO */
 .hero-logo{
   position:absolute;
-
-  left:-140px;
+  left:-80px;
   top:50%;
-
   transform:translateY(-50%);
 
   width:650px;
   height:auto;
 
-  opacity:0.16;
+  opacity:0.06;
 
   z-index:2;
   pointer-events:none;
 }
 
-/* Hero text */
-
+/* HERO CONTENT */
 .hero-content{
   position:relative;
   z-index:3;
 
-  max-width:1200px;
+  max-width:1050px;
   margin:auto;
-
-  margin-left:65px;
 }
 
 .hero h1{
-  font-size:2.5rem;
-  line-height:1.1;
+  font-size:2.8rem;
   margin-bottom:8px;
+  line-height:1.1;
 }
 
 .hero h2{
@@ -131,12 +120,13 @@ background:linear-gradient(
   margin-bottom:14px;
 }
 
-.hero p{
+.hero-content p{
   max-width:75ch;
   margin-bottom:20px;
   font-size:1.05rem;
 }
 
+/* BUTTONS */
 .btn{
   display:inline-block;
   background:white;
@@ -152,8 +142,7 @@ background:linear-gradient(
   opacity:0.9;
 }
 
-/* CONTENT */
-
+/* SECTIONS */
 .section{
   max-width:900px;
   margin:auto;
@@ -186,7 +175,6 @@ background:linear-gradient(
 }
 
 /* FOOTER */
-
 footer{
   background:var(--primary);
   color:white;
@@ -214,7 +202,6 @@ footer{
 
   <div class="hero-content">
     <h1>Peter North</h1>
-
     <h2>Independent Councillor for Bricknell</h2>
 
     <p>
