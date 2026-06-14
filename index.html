@@ -169,20 +169,28 @@ body{
   letter-spacing:0.2px;
 }
 
+.section h2{
+  font-size:1.9rem;
+  font-weight:700;
+  margin-bottom:10px;
+  letter-spacing:0.2px;
+
+  display:block;
+}
+
 .section h2::after{
   content:"";
   display:block;
 
-  width:clamp(120px, 20vw, 220px);
-  max-width:40%;
-  display:inline-block;
-
+  width:320px;
+  max-width:80%;
   height:3px;
-  background:var(--primary);
 
-  margin-top:10px;
+  background:var(--primary);
+  margin-top:12px;
+
   border-radius:2px;
-  opacity:0.85;
+  opacity:0.9;
 }
 
 /* CARDS GRID */
