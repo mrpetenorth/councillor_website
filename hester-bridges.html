@@ -271,18 +271,16 @@ footer{
 @media (max-width: 768px){
 
   /* HERO becomes simple solid background */
-  .hero{
-    background-image:none !important;
-    background:#597265 !important;
-    padding:60px 16px;
-  }
+ .hero{
+  background:none !important;
+  background-color:#597265 !important;
+  padding:60px 16px;
+}
 
-  /* kill fade overlay completely */
-  .hero::before{
-    display:none !important;
-    content:none !important;
-  }
-
+.hero::before{
+  display:none !important;
+  content:none !important;
+}
   /* content fits full width */
   .hero-content{
     max-width:100%;
