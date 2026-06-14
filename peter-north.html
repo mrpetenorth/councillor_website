@@ -265,17 +265,36 @@ footer{
 
   /* Make hero taller and more structured */
   .hero{
-    padding:70px 16px;
-    text-align:left;
+  background-image:none !important;
+  background: linear-gradient(
+    to bottom,
+    #597265,
+    #4b6155
+  );
+}
   }
 
   /* Reduce watermark dramatically or hide it */
   .hero-logo{
-    width:300px;
+    width:500px;
     left:-80px;
     opacity:0.06;
   }
+  .mobile-hero-badge{
+  display:block;
+  position:absolute;
+  top:12px;
+  right:12px;
 
+  width:60px;
+  height:60px;
+  object-fit:cover;
+
+  border-radius:8px;
+  opacity:0.9;
+
+  z-index:3;
+}
   /* Stop background image behaving like desktop composition */
   .hero{
     background-size:cover;
@@ -312,6 +331,7 @@ footer{
 <section class="hero">
 
   <img src="logo.png" alt="" class="hero-logo">
+  <img src="logo.png" class="mobile-hero-badge" alt="">
 
   <div class="hero-content">
     <h1>Peter North</h1>
