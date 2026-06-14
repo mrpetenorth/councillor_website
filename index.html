@@ -45,26 +45,28 @@ body{
 
 /* HERO STRIP */
 .hero{
-  background:linear-gradient(
-    to right,
-    var(--primary),
-    rgba(89,114,101,0.85)
-  );
-  color:white;
-
-  padding:60px 20px;
-  text-align:center;
+  position:relative;
+  overflow:hidden;
 }
 
-.hero h2{
-  font-size:2rem;
-  margin-bottom:10px;
+.hero-logo{
+  position:absolute;
+  left:-130px;
+  top:50%;
+  transform:translateY(-47%);
+
+  width:700px;
+  height:auto;
+
+  opacity:0.12;
+
+  z-index:1;
+  pointer-events:none;
 }
 
-.hero p{
-  max-width:700px;
-  margin:0 auto;
-  opacity:0.95;
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
 /* MAIN LAYOUT */
@@ -148,7 +150,7 @@ body{
 
 <div class="hero">
 
-  <img src="logo.jpg" style="width:200px;">
+  <img src="logo.png" alt="" class="hero-logo">
 
   <div>
     <h2>Choose your local councillor</h2>
