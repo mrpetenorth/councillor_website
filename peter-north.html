@@ -263,45 +263,22 @@ footer{
 
 @media (max-width: 768px){
 
-  /* =========================
-     HERO — MOBILE SIMPLIFIED
-     ========================= */
-
-  .hero{
-    background:none !important;
-    background-color:#597265 !important;
-    padding:60px 16px;
+  header{
+    display:flex;
+    align-items:center;
   }
 
-  /* kill gradient fade on mobile */
-  .hero::before{
-    content:none !important;
-    display:none !important;
+  /* keep logo left */
+  header img:first-child{
+    flex:0 0 auto;
   }
 
-  /* centre content properly on mobile */
-  .hero-content{
-    max-width:100%;
-    padding-left:0;
+  /* push text to take remaining space */
+  header > div{
+    flex:1;
   }
 
-  .hero h1{
-    font-size:2rem;
-  }
-
-  .hero h2{
-    font-size:1.2rem;
-  }
-
-  .hero p{
-    font-size:1rem;
-  }
-
-
-  /* =========================
-     HEADER AVATAR (YOUR PHOTO)
-     ========================= */
-
+  /* FORCE avatar to far right */
   .header-avatar{
     display:block;
 
@@ -315,24 +292,10 @@ footer{
     padding:4px;
 
     border:2px solid rgba(255,255,255,0.25);
+
+    margin-left:auto;   /* 🔥 this is the key */
   }
 
-  header{
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-
-
-  /* =========================
-     WATERMARK (KEEP BUT SUBTLE)
-     ========================= */
-
-  .hero-logo{
-    width:280px;
-    left:-90px;
-    opacity:0.05;
-  }
 }
 </style>
 </head>
