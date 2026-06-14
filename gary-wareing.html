@@ -263,6 +263,57 @@ footer{
 .info-panel p:last-child{
   margin-bottom:0;
 }
+
+/* =========================
+   MOBILE OVERRIDES
+========================= */
+
+@media (max-width: 768px){
+
+  /* HERO becomes simple solid background */
+  .hero{
+    background-image:none !important;
+    background:#597265 !important;
+    padding:60px 16px;
+  }
+
+  /* kill fade overlay completely */
+  .hero::before{
+    display:none !important;
+    content:none !important;
+  }
+
+  /* content fits full width */
+  .hero-content{
+    max-width:100%;
+    padding-left:0;
+  }
+
+  /* watermark scales down */
+  .hero-logo{
+  width:380px;
+  left:-110px;
+  opacity:0.10;
+}
+
+  /* header stays simple and aligned */
+  header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  header img:first-child{
+    flex:0 0 auto;
+  }
+
+  header > div{
+    flex:1;
+  }
+
+}
+
+
 </style>
 </head>
 
