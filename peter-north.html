@@ -45,10 +45,6 @@ header img{
   width:auto;
 }
 
-/* avatar default (desktop hidden) */
-.header-avatar{
-  display:none;
-}
 
 /* =========================
    HERO (DESKTOP)
@@ -258,34 +254,37 @@ footer{
 
 @media (max-width: 768px){
 
-  /* HERO becomes simple */
+  /* HERO becomes simple solid background */
   .hero{
     background-image:none !important;
     background:#597265 !important;
     padding:60px 16px;
   }
 
+  /* kill fade overlay completely */
   .hero::before{
     display:none !important;
     content:none !important;
   }
 
+  /* content fits full width */
   .hero-content{
     max-width:100%;
     padding-left:0;
   }
 
-  /* WATERMARK smaller */
+  /* watermark scales down */
   .hero-logo{
     width:280px;
     left:-90px;
     opacity:0.05;
   }
 
-  /* HEADER layout */
+  /* header stays simple and aligned */
   header{
     display:flex;
     align-items:center;
+    gap:10px;
   }
 
   header img:first-child{
@@ -294,19 +293,6 @@ footer{
 
   header > div{
     flex:1;
-  }
-
-  /* avatar appears ONLY on mobile */
-  .header-avatar{
-    display:block;
-    width:48px;
-    height:48px;
-    object-fit:cover;
-    border-radius:6px;
-    background:#597265;
-    padding:4px;
-    border:2px solid rgba(255,255,255,0.25);
-    margin-left:auto;
   }
 
 }
@@ -318,7 +304,6 @@ footer{
 
 <header>
   <img src="logo.png" alt="Bricknell Logo">
-  <img src="peter-north.jpg" class="header-avatar" alt="Cllr Peter North">
 
   <div>
     <div class="logo">Cllr Peter North</div>
