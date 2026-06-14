@@ -34,60 +34,84 @@ body{
 }
 
 .header h1{
-  font-size:1.6rem;
-  letter-spacing:0.3px;
+  font-size:1.7rem;
 }
 
 .header p{
   margin-top:6px;
-  color:#555;
+  color:#666;
 }
 
-/* HERO STRIP */
+/* HERO */
 .hero{
+  position:relative;
+  overflow:hidden;
+
   background:linear-gradient(
     to right,
-    var(--primary),
-    rgba(89,114,101,0.85)
+    rgba(89,114,101,1),
+    rgba(89,114,101,0.92)
   );
-  color:white;
 
-  padding:60px 20px;
+  color:white;
   text-align:center;
+  padding:70px 20px;
+}
+
+/* WATERMARK LOGO */
+.hero-logo{
+  position:absolute;
+  left:-130px;
+  top:50%;
+
+  transform:translateY(-47%);
+
+  width:700px;
+  height:auto;
+
+  opacity:0.12;
+
+  z-index:1;
+  pointer-events:none;
+}
+
+/* HERO CONTENT */
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
 .hero h2{
-  font-size:2rem;
-  margin-bottom:10px;
+  font-size:2.2rem;
+  margin-bottom:12px;
 }
 
 .hero p{
   max-width:700px;
   margin:0 auto;
-  opacity:0.95;
+  font-size:1.05rem;
 }
 
-/* MAIN LAYOUT */
+/* MAIN CONTENT */
 .container{
   max-width:1000px;
   margin:0 auto;
-  padding:40px 20px;
+  padding:50px 20px;
 }
 
-/* SECTION TITLE */
 .section-title{
-  font-size:1.3rem;
-  margin-bottom:20px;
-  position:relative;
+  font-size:1.8rem;
+  font-weight:700;
+  margin-bottom:30px;
 }
 
 .section-title::after{
   content:"";
   display:block;
-  width:120px;
+  width:220px;
   height:3px;
   background:var(--primary);
-  margin-top:10px;
+  margin-top:12px;
   border-radius:2px;
 }
 
@@ -95,13 +119,13 @@ body{
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  gap:22px;
 }
 
 .card{
   background:white;
+  padding:28px;
   border-radius:12px;
-  padding:26px;
 
   text-decoration:none;
   color:inherit;
@@ -109,23 +133,23 @@ body{
   border:1px solid rgba(0,0,0,0.05);
   box-shadow:0 6px 18px rgba(0,0,0,0.06);
 
-  transition:transform 0.2s ease, box-shadow 0.2s ease;
+  transition:transform 0.2s ease,
+             box-shadow 0.2s ease;
 }
 
 .card:hover{
   transform:translateY(-4px);
+
   box-shadow:0 12px 26px rgba(0,0,0,0.10);
 }
 
-.card h2{
+.card h3{
   color:var(--primary);
-  margin-bottom:6px;
-  font-size:1.2rem;
+  margin-bottom:8px;
 }
 
 .card p{
   color:#555;
-  font-size:0.95rem;
 }
 
 /* FOOTER */
@@ -138,53 +162,56 @@ body{
 </style>
 
 </head>
-
 <body>
 
 <div class="header">
   <h1>Hull Independent Councillors</h1>
-  <p>Working across Bricknell, Southcoates & Orchard Park</p>
+  <p>Local community representation across Hull</p>
 </div>
 
 <div class="hero">
 
   <img src="logo.jpg" alt="" class="hero-logo">
 
-  <div>
+  <div class="hero-content">
     <h2>Choose your local councillor</h2>
+
     <p>
-      Select your ward below to view local information, priorities, and contact details for your councillor.
+      Select your ward below to find local information, ward priorities, contact details and community updates.
     </p>
   </div>
+
 </div>
 
 <div class="container">
 
-  <div class="section-title">Councillor Pages</div>
+  <div class="section-title">
+    Councillor Pages
+  </div>
 
- <div class="cards">
+  <div class="cards">
 
-  <a class="card" href="peter-north.html">
-    <h2>Cllr Peter North</h2>
-    <p>Bricknell Ward</p>
-  </a>
+    <a class="card" href="peter-north.html">
+      <h3>Cllr Peter North</h3>
+      <p>Bricknell Ward</p>
+    </a>
 
-  <a class="card" href="hester-bridges.html">
-    <h2>Cllr Hester Bridges</h2>
-    <p>Southcoates Ward</p>
-  </a>
+    <a class="card" href="hester-bridges.html">
+      <h3>Cllr Hester Bridges</h3>
+      <p>Southcoates Ward</p>
+    </a>
 
-  <a class="card" href="gary-wareing.html">
-    <h2>Cllr Gary Wareing</h2>
-    <p>Orchard Park Ward</p>
-  </a>
+    <a class="card" href="gary-wareing.html">
+      <h3>Cllr Gary Wareing</h3>
+      <p>Orchard Park Ward</p>
+    </a>
 
-</div>
+  </div>
 
 </div>
 
 <div class="footer">
-  Hull Independent Councillors • Local community representation
+  Hull Independent Councillors
 </div>
 
 </body>
