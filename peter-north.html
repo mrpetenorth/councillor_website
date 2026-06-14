@@ -260,6 +260,41 @@ footer{
 .info-panel p:last-child{
   margin-bottom:0;
 }
+
+@media (max-width: 768px){
+
+  /* Make hero taller and more structured */
+  .hero{
+    padding:70px 16px;
+    text-align:left;
+  }
+
+  /* Reduce watermark dramatically or hide it */
+  .hero-logo{
+    width:300px;
+    left:-80px;
+    opacity:0.06;
+  }
+
+  /* Stop background image behaving like desktop composition */
+  .hero{
+    background-size:cover;
+    background-position:center;
+  }
+
+  /* Improve text readability on small screens */
+  .hero-content{
+    max-width:100%;
+  }
+
+  .hero h2{
+    font-size:1.6rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+}
 </style>
 </head>
 
