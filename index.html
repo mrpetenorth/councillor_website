@@ -55,8 +55,9 @@ body{
   );
 
   color:white;
-
-  padding:95px 20px;
+  
+  padding:75px 20px;
+  
   text-align:center;
 }
 
@@ -106,17 +107,26 @@ body{
   font-size:1.4rem;
   margin-bottom:20px;
   font-weight:700;
-  position:relative;
+
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .section-title::after{
   content:"";
   display:block;
-  width:180px;
+
+  width:100%;
+  max-width:100%;
+
   height:3px;
+
   background:var(--primary);
   margin-top:10px;
+
   border-radius:2px;
+  opacity:0.9;
 }
 
 /* CARDS */
