@@ -27,7 +27,10 @@ body{
   color:var(--dark);
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header{
   background:white;
   border-bottom:2px solid rgba(89,114,101,0.2);
@@ -42,7 +45,15 @@ header img{
   width:auto;
 }
 
-/* HERO */
+/* avatar default (desktop hidden) */
+.header-avatar{
+  display:none;
+}
+
+/* =========================
+   HERO (DESKTOP)
+========================= */
+
 .hero{
   position:relative;
   display:flex;
@@ -55,6 +66,7 @@ header img{
   background-position:-220% 25%;
 }
 
+/* text stays above overlay */
 .hero,
 .hero h1,
 .hero h2,
@@ -69,45 +81,40 @@ header img{
   inset:0;
   z-index:1;
 
- background:linear-gradient(
-  to right,
-rgba(89,114,101,1) 0%,
-rgba(89,114,101,1) 45%,
-rgba(89,114,101,0.95) 50%,
-rgba(89,114,101,0.85) 55%,
-rgba(89,114,101,0.55) 70%,
-rgba(89,114,101,0.4) 80%,
-rgba(89,114,101,95) 100%
-);
+  background:linear-gradient(
+    to right,
+    rgba(89,114,101,1) 0%,
+    rgba(89,114,101,1) 45%,
+    rgba(89,114,101,0.95) 50%,
+    rgba(89,114,101,0.85) 55%,
+    rgba(89,114,101,0.55) 70%,
+    rgba(89,114,101,0.4) 80%,
+    rgba(89,114,101,0) 100%
+  );
 }
 
-/* WATERMARK LOGO */
+/* WATERMARK */
 .hero-logo{
   position:absolute;
   left:-130px;
   top:50%;
   transform:translateY(-47%);
-
   width:700px;
   height:auto;
-
   opacity:0.12;
-
   z-index:2;
   pointer-events:none;
 }
 
-/* HERO CONTENT (LEFT COLUMN) */
+/* HERO CONTENT */
 .hero-content{
   position:relative;
   z-index:3;
-
   max-width:520px;
-  margin:0;
-
   padding-left:60px;
 }
 
+/* TYPOGRAPHY */
 .hero h1{
   font-size:2.8rem;
   line-height:1.1;
@@ -143,12 +150,10 @@ rgba(89,114,101,95) 100%
   opacity:0.85;
 }
 
-/* PAGE BACKGROUND */
-body{
-  background:#f7f9f8;
-}
+/* =========================
+   SECTIONS
+========================= */
 
-/* SECTIONS (SURFACE STYLE) */
 .section{
   max-width:900px;
   margin:30px auto;
@@ -156,17 +161,7 @@ body{
 
   background:white;
   border-radius:14px;
-
   box-shadow:0 8px 24px rgba(0,0,0,0.04);
-}
-
-.section h2{
-  font-size:1.9rem;
-  font-weight:700;
-  margin-bottom:28px;
-
-  position:relative;
-  letter-spacing:0.2px;
 }
 
 .section h2{
@@ -174,43 +169,44 @@ body{
   font-weight:700;
   margin-bottom:10px;
   letter-spacing:0.2px;
-
-  display:block;
+  position:relative;
 }
 
 .section h2::after{
   content:"";
   display:block;
 
-  width:840px;
-  max-width:100%;
+  width:100%;
   height:3px;
 
   background:var(--primary);
   margin-top:8px;
-
   border-radius:2px;
   opacity:0.9;
 }
 
-/* CARDS GRID */
+/* =========================
+   CARDS
+========================= */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
 
-/* CARDS */
 .card{
   background:#fff;
   padding:22px;
   border-radius:12px;
-
   border:1px solid rgba(0,0,0,0.05);
-
   box-shadow:0 4px 14px rgba(0,0,0,0.04);
-
   transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
 
 .card h3{
@@ -222,12 +218,10 @@ body{
   line-height:1.5;
 }
 
-.card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 24px rgba(0,0,0,0.08);
-}
+/* =========================
+   FOOTER
+========================= */
 
-/* FOOTER */
 footer{
   background:var(--primary);
   color:white;
@@ -236,15 +230,16 @@ footer{
   margin-top:40px;
 }
 
+/* =========================
+   INFO PANELS
+========================= */
+
 .info-panel{
   background:white;
   padding:28px;
   border-radius:12px;
-
   border-left:5px solid var(--primary);
-
   box-shadow:0 4px 14px rgba(0,0,0,0.04);
-
   margin-bottom:20px;
 }
 
@@ -257,50 +252,65 @@ footer{
   margin-bottom:14px;
 }
 
-.info-panel p:last-child{
-  margin-bottom:0;
-}
-
-.header-avatar{
-  display:none;
-}
+/* =========================
+   MOBILE OVERRIDES
+========================= */
 
 @media (max-width: 768px){
 
+  /* HERO becomes simple */
+  .hero{
+    background-image:none !important;
+    background:#597265 !important;
+    padding:60px 16px;
+  }
+
+  .hero::before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .hero-content{
+    max-width:100%;
+    padding-left:0;
+  }
+
+  /* WATERMARK smaller */
+  .hero-logo{
+    width:280px;
+    left:-90px;
+    opacity:0.05;
+  }
+
+  /* HEADER layout */
   header{
     display:flex;
     align-items:center;
   }
 
-  /* keep logo left */
   header img:first-child{
     flex:0 0 auto;
   }
 
-  /* push text to take remaining space */
   header > div{
     flex:1;
   }
 
-  /* FORCE avatar to far right */
+  /* avatar appears ONLY on mobile */
   .header-avatar{
     display:block;
-
     width:48px;
     height:48px;
     object-fit:cover;
-
     border-radius:6px;
-
     background:#597265;
     padding:4px;
-
     border:2px solid rgba(255,255,255,0.25);
-
-    margin-left:auto;   /* 🔥 this is the key */
+    margin-left:auto;
   }
 
 }
+
 </style>
 </head>
 
