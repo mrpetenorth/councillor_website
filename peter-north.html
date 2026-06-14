@@ -263,44 +263,44 @@ footer{
 
 @media (max-width: 768px){
 
-  /* Make hero taller and more structured */
-  
-  .hero::before{
-  background:none !important;
-  display:none !important;
-}
+  /* =========================
+     HERO — MOBILE SIMPLIFIED
+     ========================= */
 
-  /* Reduce watermark dramatically or hide it */
-  .hero-logo{
-    width:500px;
-    left:-80px;
-    opacity:0.06;
-  }
-  
-  /* Stop background image behaving like desktop composition */
   .hero{
-    background-size:cover;
-    background-position:center;
+    background:none !important;
+    background-color:#597265 !important;
+    padding:60px 16px;
   }
 
-  /* Improve text readability on small screens */
+  /* kill gradient fade on mobile */
+  .hero::before{
+    content:none !important;
+    display:none !important;
+  }
+
+  /* centre content properly on mobile */
   .hero-content{
     max-width:100%;
+    padding-left:0;
+  }
+
+  .hero h1{
+    font-size:2rem;
   }
 
   .hero h2{
-    font-size:1.6rem;
+    font-size:1.2rem;
   }
 
   .hero p{
     font-size:1rem;
   }
-}
-  .header-avatar{
-  display:none;
-}
 
-@media (max-width: 768px){
+
+  /* =========================
+     HEADER AVATAR (YOUR PHOTO)
+     ========================= */
 
   .header-avatar{
     display:block;
@@ -321,6 +321,17 @@ footer{
     display:flex;
     align-items:center;
     gap:10px;
+  }
+
+
+  /* =========================
+     WATERMARK (KEEP BUT SUBTLE)
+     ========================= */
+
+  .hero-logo{
+    width:280px;
+    left:-90px;
+    opacity:0.05;
   }
 }
 </style>
