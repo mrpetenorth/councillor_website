@@ -23,33 +23,78 @@ body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:#f7f9f8;
   color:var(--dark);
+}
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
+/* HEADER */
+.header{
+  background:white;
+  border-bottom:2px solid rgba(89,114,101,0.15);
+  padding:18px 24px;
   text-align:center;
-  padding:40px;
 }
 
-.container{
-  max-width:900px;
+.header h1{
+  font-size:1.6rem;
+  letter-spacing:0.3px;
 }
 
-h1{
-  font-size:2.4rem;
+.header p{
+  margin-top:6px;
+  color:#555;
+}
+
+/* HERO STRIP */
+.hero{
+  background:linear-gradient(
+    to right,
+    var(--primary),
+    rgba(89,114,101,0.85)
+  );
+  color:white;
+
+  padding:60px 20px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:2rem;
   margin-bottom:10px;
 }
 
-p{
-  margin-bottom:30px;
-  color:#444;
-  font-size:1.05rem;
+.hero p{
+  max-width:700px;
+  margin:0 auto;
+  opacity:0.95;
 }
 
+/* MAIN LAYOUT */
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:1.3rem;
+  margin-bottom:20px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width:120px;
+  height:3px;
+  background:var(--primary);
+  margin-top:10px;
+  border-radius:2px;
+}
+
+/* CARDS */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
 }
 
@@ -58,40 +103,61 @@ p{
   border-radius:12px;
   padding:26px;
 
-  box-shadow:0 6px 18px rgba(0,0,0,0.06);
-  border:1px solid rgba(0,0,0,0.05);
-
-  transition:transform 0.2s ease, box-shadow 0.2s ease;
-  cursor:pointer;
   text-decoration:none;
   color:inherit;
+
+  border:1px solid rgba(0,0,0,0.05);
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover{
   transform:translateY(-4px);
-  box-shadow:0 10px 26px rgba(0,0,0,0.1);
+  box-shadow:0 12px 26px rgba(0,0,0,0.10);
 }
 
 .card h2{
   color:var(--primary);
+  margin-bottom:6px;
   font-size:1.2rem;
-  margin-bottom:8px;
 }
 
 .card p{
+  color:#555;
   font-size:0.95rem;
-  margin:0;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:30px 20px;
+  color:#777;
+  font-size:0.9rem;
 }
 </style>
+
 </head>
 
 <body>
 
+<div class="header">
+  <h1>Hull Independent Councillors</h1>
+  <p>Working across Bricknell, Southcoates & Orchard Park</p>
+</div>
+
+<div class="hero">
+  <div>
+    <h2>Choose your local councillor</h2>
+    <p>
+      Select your ward below to view local information, priorities, and contact details for your councillor.
+    </p>
+  </div>
+</div>
+
 <div class="container">
 
-  <h1>Hull Independent Councillors</h1>
-
-  <p>Select your local councillor</p>
+  <div class="section-title">Councillor Pages</div>
 
   <div class="cards">
 
@@ -112,6 +178,10 @@ p{
 
   </div>
 
+</div>
+
+<div class="footer">
+  Hull Independent Councillors • Local community representation
 </div>
 
 </body>
