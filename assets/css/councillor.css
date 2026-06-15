@@ -56,8 +56,8 @@ header img{
 
   /* IMAGE SYSTEM */
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right center;
+  background-size: cover;
+  background-position: 0% 100%;
 }
 
 
