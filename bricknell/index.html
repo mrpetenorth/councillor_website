@@ -12,6 +12,7 @@
   --primary:#597265;
   --light:#f4f7f5;
   --dark:#243029;
+  --accent:#f4f2df;
 }
 
 *{
@@ -21,10 +22,9 @@
 }
 
 body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  line-height:1.5;
-  background:#f7f9f8;
-  color:var(--dark);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--accent);
+  color: var(--dark);
 }
 
 /* =========================
@@ -32,12 +32,8 @@ body{
 ========================= */
 
 header{
-  background:white;
-  border-bottom:2px solid rgba(89,114,101,0.2);
-  padding:12px 24px;
-  display:flex;
-  align-items:center;
-  gap:12px;
+  background: var(--accent);
+  border-bottom: 2px solid rgba(89,114,101,0.15);
 }
 
 header img{
