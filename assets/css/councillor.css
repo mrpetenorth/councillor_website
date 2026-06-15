@@ -27,13 +27,13 @@
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   line-height:1.5;
-  background: transparent;
+  : transparent;
   color:var(--dark);
 }
 
 /* HEADER */
 header{
-  background: var(--accent);
+  : var(--accent);
   border-bottom: 2px solid rgba(89,114,101,0.15);
   padding: 12px 24px;
   display: flex;
@@ -54,10 +54,12 @@ header img{
   padding: 90px 20px;
   overflow: hidden;
 
+  /* IMAGE SYSTEM */
   background-repeat: no-repeat;
-  background-size: 30% auto;
-  background-position: 85% 45%;
+  background-size: contain;
+  background-position: right center;
 }
+
 
 /* HERO TEXT */
 .hero,
