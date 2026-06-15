@@ -48,11 +48,9 @@ header img{
 
 /* HERO BASE */
 .hero{
-  position:relative;
-  display:flex;
-  align-items:center;
-  padding:90px 20px;
-  overflow:hidden;
+  background-repeat: no-repeat;
+  background-size: 30% auto;
+  background-position: right center;
 }
 
 /* HERO TEXT */
