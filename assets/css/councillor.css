@@ -172,6 +172,20 @@ header img{
   margin-top:8px;
 }
 
+.facebook-feed .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.facebook-feed .card {
+  border-left: 4px solid var(--primary);
+}
+
+.facebook-feed h2 {
+  margin-bottom: 20px;
+}
+
 /* CARDS */
 .cards{
   display:grid;
