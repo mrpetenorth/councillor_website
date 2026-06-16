@@ -205,6 +205,27 @@ header img{
   transform:translateY(-3px);
 }
 
+.cards a.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.cards a.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.cards a.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* ===== ARTICLE / NEWS EXTENSION ===== */
 
 .article-card img{
