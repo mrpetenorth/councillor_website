@@ -12,6 +12,12 @@
 
 <body>
 
+<div id="fb-root"></div>
+
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v20.0">
+</script>
+  
 <div class="page">
   
 <header>
@@ -77,21 +83,15 @@
 <section class="section facebook-feed">
   <h2>Latest Facebook Posts</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Post title 1</h3>
-      <p>Post snippet text...</p>
-    </div>
-
-    <div class="card">
-      <h3>Post title 2</h3>
-      <p>Post snippet text...</p>
-    </div>
-
-    <div class="card">
-      <h3>Post title 3</h3>
-      <p>Post snippet text...</p>
-    </div>
+  <div class="fb-page"
+       data-href="https://www.facebook.com/cllrpeternorth"
+       data-tabs="timeline"
+       data-width=""
+       data-height="600"
+       data-small-header="false"
+       data-adapt-container-width="true"
+       data-hide-cover="false"
+       data-show-facepile="false">
   </div>
 </section>
   
